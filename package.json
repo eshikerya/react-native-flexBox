@@ -1,0 +1,16 @@
+{
+    "name": "react-native-flexBox",
+    "version": "1.0.0",
+    "description": "react native flexBox layout helper",
+    "main": "index.js",
+    "repository": "https://github.com/eshikerya/react-native-flexBox.git",
+    "author": "Jacky Shikerya <shikerya@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "flow-bin": "0.67.1"
+    },
+    "peerDependencies": {
+        "react-native": "^0.55.4"
+    }
+}
