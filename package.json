@@ -11,6 +11,6 @@
         "flow-bin": "0.67.1"
     },
     "peerDependencies": {
-        "react-native": "^0.55.4"
+        "react-native": "*"
     }
 }
