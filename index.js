@@ -2,10 +2,11 @@
  * @flow
  */
 
-import { StyleSheet, View } from 'react-native';
-
 import type { ElementType } from 'react';
 import React from 'react';
+import type { ____Styles_Internal as StylesType } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+import { View } from 'react-native';
+type CallbackType<T = void, R = void> = (value: T) => R;
 
 type PropsType = {
     +children?: Node | Array<Node>,
@@ -69,7 +70,7 @@ type PropsType = {
     alignHCenter?: boolean
 };
 
-const style = StyleSheet.create({
+const style = {
     alignContentFlexStart: {
         alignContent: 'flex-start'
     },
@@ -173,12 +174,13 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     }
-});
+};
 
 const FlexBox = (props: PropsType) => {
     const cProps = Object.keys(props).reduce(
         (obj, k) => {
             if (k in style) {
+                // $FlowFixMe
                 obj.filterStyle.push(style[k]);
             } else {
                 obj.other[k] = props[k];
