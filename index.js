@@ -2,16 +2,18 @@
  * @flow
  */
 
+import { StyleSheet, View } from 'react-native';
+
 import type { ElementType } from 'react';
 import React from 'react';
-import type { ____Styles_Internal as StylesType } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
-import { View } from 'react-native';
+import type { ____ViewStyle_Internal as StylesPropsType } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+
 type CallbackType<T = void, R = void> = (value: T) => R;
 
 type PropsType = {
     +children?: Node | Array<Node>,
 
-    style?: StylesType,
+    style?: StylesPropsType,
     as?: ElementType,
 
     alignContentFlexStart?: boolean,
@@ -70,7 +72,7 @@ type PropsType = {
     alignHCenter?: boolean
 };
 
-const style = {
+const style = StyleSheet.create({
     alignContentFlexStart: {
         alignContent: 'flex-start'
     },
@@ -174,7 +176,7 @@ const style = {
         justifyContent: 'center',
         alignItems: 'center'
     }
-};
+});
 
 const FlexBox = (props: PropsType) => {
     const cProps = Object.keys(props).reduce(
