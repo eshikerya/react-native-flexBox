@@ -1,6 +1,6 @@
 {
     "name": "react-native-flexbox",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "react native flexBox layout helper",
     "main": "index.js",
     "repository": "https://github.com/eshikerya/react-native-flexBox.git",
